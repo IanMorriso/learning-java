@@ -5,6 +5,8 @@
  */
 
 public class Main {
+    int x = 5;
+    final int y = 10;
     public static void main(String[] args) {
         System.out.println("Hello World");
 
@@ -31,6 +33,15 @@ public class Main {
 
         // Recursion test
         System.out.println(fib(6));
+
+        // Objects
+        Main myObj = new Main();
+        myObj.x = 40;
+        System.out.println(myObj.x);
+
+        myStaticMethod(); // This works as we don't need to call it with an object
+
+        myObj.myPublicMethod(); // We need to call the pulic method on the object
     }
 
     static int myMethod(String fname, int age) {
@@ -55,5 +66,24 @@ public class Main {
         }
         // Recursion
         return fib(n-1) + fib(n-2);
+    }
+
+    // Static method
+    static void myStaticMethod() {
+        System.out.println("Static methods can be called without creating objects");
+    }
+
+    //Public method
+    public void myPublicMethod() {
+        System.out.println("Public methods must be called by creating objects");
+    }
+
+
+    public void full_throttle() {
+        System.out.println("The car is going as fast as it can!");
+    }
+
+    public void max_speed(int maximum) {
+        System.out.println("Max speed is: " + maximum);
     }
 }
