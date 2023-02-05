@@ -5,8 +5,16 @@
  */
 
 public class Main {
-    int x = 5;
-    final int y = 10;
+    int x;
+    int y;
+    double pi;
+
+    public Main(double pie) {
+        x = 5;
+        y = 10;
+        final double pi = pie;
+    }
+
     public static void main(String[] args) {
         System.out.println("Hello World");
 
@@ -24,20 +32,25 @@ public class Main {
             System.out.println(i);
         }
 
+
         // Method test
         System.out.println("He still thinks he is " + myMethod("Ian", 29));
 
+        
         // Overloading test
         System.out.println(plusMethod(2, 3));
         System.out.println(plusMethod(3.2, 5.6));
 
+
         // Recursion test
         System.out.println(fib(6));
 
+
         // Objects
-        Main myObj = new Main();
+        Main myObj = new Main(3.1415);
         myObj.x = 40;
         System.out.println(myObj.x);
+        System.out.println(myObj.pi);
 
         myStaticMethod(); // This works as we don't need to call it with an object
 
